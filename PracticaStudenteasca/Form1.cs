@@ -16,5 +16,20 @@ namespace PracticaStudenteasca
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Incerc logarea");
+        }
     }
 }
