@@ -29,7 +29,21 @@ namespace PracticaStudenteasca
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Incerc logarea");
+            // Services.UserServices.GenerateMockUsers();
+            if (Services.LoginServices.Login(mailTextBox.Text, passwordTextBox.Text) == true)
+            {
+                Ct.loggedUser = Services.UserServices.GetUserByMail(mailTextBox.Text);
+                if (Ct.loggedUser.UserType == UserTypes.Admin)
+                {
+                    Form f = new Form();
+                    f.Show();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid mail or password");
+            }
         }
     }
 }
