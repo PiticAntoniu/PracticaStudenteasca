@@ -49,7 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForm.Designer.cs">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ct.cs" />
+    <Compile Include="Entities\Firma.cs" />
+    <Compile Include="Entities\Grupa.cs" />
+    <Compile Include="Entities\Profesor.cs" />
+    <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -62,6 +72,9 @@
     <Compile Include="Services\LoginServices.cs" />
     <Compile Include="Services\UserServices.cs" />
     <Compile Include="UserTypes.cs" />
+    <EmbeddedResource Include="adminForm.resx">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

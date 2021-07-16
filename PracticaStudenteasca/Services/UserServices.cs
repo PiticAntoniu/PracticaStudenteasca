@@ -10,7 +10,7 @@ namespace PracticaStudenteasca.Services
     {
         static List<User> userList = null;
 
-        internal List<User> UserList { get => userList; set => userList = value; }
+        public static List<User> UserList { get => userList; set => userList = value; }
 
         public static void GenerateMockUsers()
         {
@@ -23,6 +23,15 @@ namespace PracticaStudenteasca.Services
             string serialisedResults = JsonConvert.SerializeObject(userList);
             File.WriteAllText("userList.json", serialisedResults);
 
+        }
+
+        internal static object GetUserList()
+        {
+            if (userList == null)
+            {
+                userList = GetUsers(Ct.UserListLocation);
+            }
+            return userList;
         }
 
         internal static User GetUserByMail(string mail)

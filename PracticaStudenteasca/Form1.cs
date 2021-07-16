@@ -35,7 +35,7 @@ namespace PracticaStudenteasca
                 Ct.loggedUser = Services.UserServices.GetUserByMail(mailTextBox.Text);
                 if (Ct.loggedUser.UserType == UserTypes.Admin)
                 {
-                    Form f = new Form();
+                    Form f = new adminForm();
                     f.Show();
                 }
 
