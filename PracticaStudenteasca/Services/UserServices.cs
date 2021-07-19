@@ -25,7 +25,7 @@ namespace PracticaStudenteasca.Services
 
         }
 
-        internal static object GetUserList()
+        internal static List <User> GetUserList()
         {
             if (userList == null)
             {
